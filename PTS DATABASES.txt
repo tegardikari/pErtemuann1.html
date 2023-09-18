@@ -1,0 +1,68 @@
+Create Database Apotek_tegar_azhar;
+
+use apotek_tegar_azhar;
+
+create table tb_obat (
+-> Kode_obat int(99) not null,
+-> Nama_obat varchar(99) not null,
+-> Jenis varchar(99) not null,
+-> Satuan varchar(99) not null,
+-> Stok varchar(99) not null,
+-> Harga_Satuan Varchar(99) not null,
+-> Harga_jual Varchar(99) not null
+-> ;
+
+insert into tb_obat values
+-> ('1','Allerin 120 cc','Obat Terbatas','Botol','50','20000','22000'),
+
+-> ('2','Becombion 110 ml','Obat Bebas','Botol','10','15000','16000'),
+
+-> ('3','Becombium 60 ml','Obat Bebas','Botol','10','8000','8000),
+
+-> ('4','Betadine vag  Plus','Obat Bebas','Botol','10','12000','13000'),
+
+-> ('5','Komix','Obat Bebas','Lembar','50','4500','5000')
+
+-> ('6','Diazepam','Obat Keras','Tablet','4','55000','60000'),
+
+-> ('7','CTM','Obat Bebas','Tablet','3','70000','75000'),
+
+-> ('8','Amoxicillin','Obat Terbatas','Tablet','74','975','1100'),
+
+-> ('9','Antimo','Obat Bebas','Tablet','2','5100','6000'),
+
+-> ('10','Parasetamol','Obat Bebas','Strips','100','3000','4000') ;
+
+
+
+select * from tb_obat;
+
+1. select * from tb_obat
+    -> where Satuan='Botol' ;
+
+2.  select * from tb_obat
+    -> where Jenis='Obat Keras' or Jenis ='obat Terbatas' ;
+
+3. select * from tb_obat
+    -> where Stok <='49';
+
+4. select * from tb_obat
+    -> where satuan!='tablet;
+
+5. select * from tb_obat 
+    ->  WHERE jenis='Obat Bebas' AND harga_jual ORDER BY harga_jual ASC;
+
+6. select * from tb_obat
+    -> where Satuan='Botol' AND Harga_satuan BETWEEN 10000 and 100000;
+
+7. select * from tb_obat
+    -> where Jenis='Obat Bebas' and Stok>= '5' ;
+
+8. select * from tb_obat
+    -> where Nama_obat like '%b%';
+
+9.  select * from tb_obat
+    -> where Nama_obat like '%OM%';
+
+12. select * from tb_obat
+    ->  WHERE kode_obat='K001' OR kode_obat='K003' OR kode_obat='K005' OR kode_obat='K007';
